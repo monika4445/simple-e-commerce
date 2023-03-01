@@ -1,0 +1,11 @@
+**/node_modules/
+**/build/
+**/.env
+*.log
+.DS_Store
+**/.cache/
+**/.cypress/
+**/.coverage/
+**/.nyc_output/
+**/dist/
+**/public/
