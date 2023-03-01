@@ -1,0 +1,113 @@
+/* Product Detail CSS */
+
+/* Main container */
+.product-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+/* Product image */
+.product-detail img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Product info */
+.product-detail-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+/* Product name */
+.product-detail-info h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Product price */
+.product-detail-info h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Product description */
+.product-detail-info p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+/* Media queries */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+
+  /* Main container */
+  .product-detail {
+    margin: 20px;
+  }
+
+  /* Product info */
+  .product-detail-info {
+    margin: 20px;
+  }
+
+  /* Product name */
+  .product-detail-info h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  /* Product price */
+  .product-detail-info h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  /* Product description */
+  .product-detail-info p {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+
+  /* Main container */
+  .product-detail {
+    margin: 10px;
+  }
+
+  /* Product info */
+  .product-detail-info {
+    margin: 10px;
+  }
+
+  /* Product name */
+  .product-detail-info h1 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  /* Product price */
+  .product-detail-info h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  /* Product description */
+  .product-detail-info p {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+}

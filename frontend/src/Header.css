@@ -1,0 +1,109 @@
+.header-nav {
+    background-color: #151414;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Navigation */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Navigation List */
+  .nav__list {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav__list-item {
+    margin-right: 20px;
+  }
+  
+  .nav__link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .nav__link:hover {
+    color: #f05030;
+  }
+  
+  /* Search Form */
+
+  .search-form {
+    position: relative;
+  }
+  
+  .search-form input[type="text"] {
+    padding: 5px 40px 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    font-size: 14px;
+    color: #333;
+    width: 250px;
+  }
+  
+  .search-form button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+  }
+
+  .search-form button i {
+    color: #333;
+  }
+  
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .icons a {
+    margin-right: 20px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .icons i {
+    font-size: 20px;
+  }
+  
+  .icons i:hover {
+    color: #0071c5;
+  }
+  
+  
+  /* Navigation Icons */
+  .nav__icons {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav__icons-item {
+    margin-right: 20px;
+  }
+  
+  .nav__icon-link {
+    color: #111;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .nav__icon-link:hover {
+    color: #f05030;
+  }
+  

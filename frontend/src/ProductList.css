@@ -1,0 +1,97 @@
+/* Product List CSS */
+
+/* Main container */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px;
+  }
+  
+  /* Product item */
+  .product-item {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .product-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Product image */
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .image-container img {
+    width: 60%;
+    height: auto;
+  }
+  
+  
+  
+  
+  /* Product name */
+  .product-item h3 {
+    font-size: 18px;
+    margin: 10px;
+    color: #333;
+  }
+  
+  /* Product price */
+  .product-item h4 {
+    font-size: 16px;
+    margin: 10px;
+    color: #333;
+  }
+  
+  /* Media queries */
+  
+  /* For screens smaller than 768px */
+  @media (max-width: 668px) {
+  
+    /* Main container */
+    .product-list {
+      flex-direction: column;
+      margin: 20px;
+    }
+  
+    /* Product item */
+    .product-item {
+      width: 100%;
+    }
+  
+    /* Product name */
+    .product-item h3 {
+      font-size: 16px;
+    }
+  
+    /* Product price */
+    .product-item h4 {
+      font-size: 14px;
+    }
+  }
+  
+  /* For screens smaller than 480px */
+  @media (max-width: 480px) {
+  
+    /* Main container */
+    .product-list {
+      margin: 10px;
+    }
+  
+    /* Product name */
+    .product-item h3 {
+      font-size: 14px;
+    }
+  
+    /* Product price */
+    .product-item h4 {
+      font-size: 12px;
+    }
+  }
+  
