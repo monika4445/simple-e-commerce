@@ -12,7 +12,7 @@ export default function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:4000/books');
+      const response = await fetch('http://localhost:4000/dresses');
       const data = await response.json();
       setProducts(data);
     };
@@ -24,19 +24,15 @@ export default function App() {
       <Header />
       <Router>
         <Routes>
-          <Route path="/" element={<ProductList products={products} />} />
+          <Route
+            path="/"
+            element={<ProductList products={products} />}
+          />
           <Route
             path="/product/:id"
             element={
-              <ProductDetail
-                products={products}
-                addToCart={(product) => setCart([...cart, product])}
-              />
+              <ProductDetail addToCart={(product) => setCart([...cart, product])}/>
             }
-          />
-          <Route
-            path="/cart"
-            element={<ShoppingCart cart={cart} setCart={setCart} />}
           />
         </Routes>
       </Router>
