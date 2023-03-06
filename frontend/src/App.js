@@ -4,7 +4,7 @@ import ProductList from './ProductList';
 import ProductDetail from './ProductDetail';
 import Header from './Header';
 import Footer from './Footer';
-import ShoppingCart from './ShoppingCart';
+// import ShoppingCart from './ShoppingCart';
 
 export default function App() {
   const [products, setProducts] = useState([]);

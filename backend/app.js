@@ -61,11 +61,70 @@ app.post('/dresses', (req, res) => {
   );
 });
 
-app.listen(4000, () => {
-  console.log('Server is listening on port 4000.');
+app.delete('/dresses', (req, res) => {
+  const id = req.query.id;
+  if (!id) {
+    res.status(400).send('Please provide the "id" parameter.');
+    return;
+  }
+  db.run(
+    'DELETE FROM dresses WHERE id = ?',
+    [id],
+    (err) => {
+      if (err) {
+        console.error(err.message);
+        res.status(500).send('Internal Server Error');
+      } else {
+        res.send(`Deleted dress with id ${id} from "dresses" database.`);
+      }
+    }
+  );
 });
 
-   
+app.put('/dresses', (req, res) => {
+  const id = req.query.id;
+  const { name, imgSrc, price, description } = req.body;
+  if (!id || !name || !imgSrc || !price || !description) {
+    res.status(400).send('Please provide all required fields.');
+    return;
+  }
+  db.run(
+    'UPDATE dresses SET name = ?, imgSrc = ?, price = ?, description = ? WHERE id = ?',
+    [name, imgSrc, price, description, id],
+    (err) => {
+      if (err) {
+        console.error(err.message);
+        res.status(500).send('Internal Server Error');
+      } else {
+        res.send('Updated "dresses" database.');
+      }
+    }
+  );
+});
+
+app.patch('/dresses', (req, res) => {
+  const { id } = req.query;
+  const updates = req.body;
+
+  const setValues = Object.keys(updates).map(update => `${update} = ?`).join(', ');
+  const values = Object.values(updates);
+
+  db.run(`UPDATE dresses SET ${setValues} WHERE id = ?`, [...values, id], (err) => {
+    if (err) {
+      console.error(err.message);
+      res.status(500).send('Internal Server Error');
+    } else {
+      res.send(`Dress with id ${id} updated successfully`);
+    }
+  });
+});
+
+const PORT = 4000;
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}.`);
+});
+
+//same with params will be - 
 // app.get('/dresses/:id', (req, res) => {
 //     const id = req.params.id
 //     db.get('SELECT * FROM dresses WHERE id=?', [id], (err, data) => {
